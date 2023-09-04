@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body-container {
+    width: 100vh;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url("https://img.freepik.com/free-vector/scene-beautiful-cityscape-with-hight-building-shop-street-with-park_1150-48972.jpg");
+}
+
+.img-container {
+    width: 40%;
+    position: absolute;
+    bottom: 10px;
+    left: -300px;
+    animation-name: MyAnimation;
+    animation-duration: 10s;
+    z-index: 2;
+}
+
+.removing-container {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    animation-name: myTaxi;
+    animation-iteration-count: 1;
+    animation-duration: 20s;
+}
+
+.removing-container img {
+    width: 100%;
+}
+
+.moving-container {
+    width: 30%;
+    position: absolute;
+    background: transparent;
+    left: 0px;
+    bottom: 130px;
+    animation-name: myMan;
+    animation-duration: 25s;
+    animation-iteration-count: 1;
+    z-index: 0;
+}
+
+.moving-container img {
+    width: 100%;
+    background: transparent;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+@keyframes myTaxi {
+    from {
+        right: -800px;
+    }
+    to {
+        right: 1500px;
+    }
+}
+
+@keyframes myMan {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 1400px;
+    }
+}
+
+@keyframes MyAnimation {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 1400px;
+    }
+}
